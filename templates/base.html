@@ -1,0 +1,30 @@
+<!DOCTYPE html>{% load url from future %}
+<html>
+<head>
+<meta charset="utf-8"/>
+{% block title %}{% endblock %}
+{% block extra_head %}{% endblock %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Bratabase Connect test site</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'auth_logout' %}">Log out</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+{% block content %}{% endblock %}
+</div>
+{% block scripts %}{% endblock %}
+</body>
+</html>

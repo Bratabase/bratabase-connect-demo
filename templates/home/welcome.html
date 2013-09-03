@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+<div class="alert alert-success">
+<p>You have successfully connected your Bratabase account</p>
+</div>
+<div class="jumbotron">
+<div class="media">
+  <a class="pull-left" href="#">
+    <img src="{{avatar}}"/>
+  </a>
+  <div class="media-body">
+    <h1 class="media-heading">Hi {{user}}</h1>
+    <p>It looks like you are a <strong>{{top_brand}}</strong> fan.</p>
+    <p>Looks like your size is <strong>{{top_size}}</strong></p>
+    <p>This is a sample application to show how does Bratabase Connect works.</p>
+    <p><a href="http://developers.bratabase.com/" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+  </div>
+</div>
+</div>
+
+<div class="page-header">
+<h2>You have {{bras|length}} bra{{bras|length|pluralize}} on Bratabase.com</h2>
+</div>
+
+{% for brand_url, brand in brands.items %}
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3><a href="{{brand_url}}">{{brand.name}}</a></h3>
+</div>
+<ul class="list-group">
+{% for bra in brand.bras %}
+<li class="list-group-item"><a href="{{bra.bratabase_url}}">{{bra.name}}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% empty %}
+<p class="alert alert-warning">You don't have any bras on Bratabase.com</p>
+{% endfor %}
+
+{% endblock %}

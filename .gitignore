@@ -1,0 +1,5 @@
+*.pyc
+venv
+staticfiles
+app.db
+local_settings.py
