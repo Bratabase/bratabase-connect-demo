@@ -13,9 +13,8 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
-import os, sys
+import os
 
-sys.path[0:0] = ['apps']
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")
 
 # This application object is used by any WSGI server configured to use this

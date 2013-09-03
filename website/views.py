@@ -8,7 +8,7 @@ from django.utils.datastructures import SortedDict
 
 from urllib2 import urlopen, Request, HTTPError
 
-from common.auth.backends.bratabase import BratabaseAuth
+from bratabase_social_auth.backends.bratabase import BratabaseAuth
 
 
 def get_request(url, token):

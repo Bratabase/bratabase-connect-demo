@@ -116,7 +116,7 @@ LOGGING = {
 }
 
 AUTHENTICATION_BACKENDS = [
-    'common.auth.backends.bratabase.BratabaseBackend',
+    'bratabase_social_auth.backends.bratabase.BratabaseBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
 
