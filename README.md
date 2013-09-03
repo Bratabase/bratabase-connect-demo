@@ -11,6 +11,8 @@ You can see the app running at http://bratabase-connect.herokuapp.com/
 
 Before beginning, you will need to register your Application on http://www.bratabase.com/my/developer/applications/
 
+On the `Redirect URI` field, enter the host you will be running this from (possibly `http://localhost:8000`) and make sure the path is `/complete/bratabase/`.
+
 Then create a `local_settings.py` file at the root of your repository with the following contents:
 
 ```
