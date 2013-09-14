@@ -122,7 +122,7 @@ AUTHENTICATION_BACKENDS = [
 
 
 LOGIN_REDIRECT_URL = '/'
-LOGIN_URL = '/auth/login/'
+LOGIN_URL = '/login/'
 
 SOCIAL_AUTH_COMPLETE_URL_NAME  = 'socialauth_complete'
 SOCIAL_AUTH_ASSOCIATE_URL_NAME = 'socialauth_associate_complete'
