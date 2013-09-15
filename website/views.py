@@ -87,7 +87,7 @@ def home(request):
     sizes = sort_sizes(user_bras)
 
     return render(request, 'home/welcome.html', {
-        'bras': user_bras,
+        'bras': user_bras['collection'],
         'brands': brands,
         'top_brand': top_brand,
         'top_size': sizes.keys()[0],
