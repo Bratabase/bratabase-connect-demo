@@ -8,7 +8,7 @@ from django.utils.datastructures import SortedDict
 
 from urllib2 import urlopen, Request, HTTPError
 
-from bratabase_social_auth.backends.bratabase import BratabaseAuth
+from common.auth.backends.bratabase import BratabaseAuth
 
 
 def get_request(url, token):
@@ -35,8 +35,7 @@ def get_avatar(token):
 
 def sort_bras(bras):
     result = {}
-    for bra in bras:
-        bra = bra['body']
+    for bra in bras['collection']:
         brand_url = bra['brand']['bratabase_url']
         if brand_url not in result:
             result[brand_url] = {
@@ -57,8 +56,8 @@ def get_top_brand(brands):
 
 def sort_sizes(bras):
     result = {}
-    for bra in bras:
-        size = bra['body']['size']
+    for bra in bras['collection']:
+        size = bra['size']
         if size not in result:
             result[size] = 0
 
