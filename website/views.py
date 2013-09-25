@@ -57,7 +57,7 @@ def get_top_brand(brands):
 def sort_sizes(bras):
     result = {}
     for bra in bras['collection']:
-        size = bra['size']
+        size = bra['size']['size']
         if size not in result:
             result[size] = 0
 
