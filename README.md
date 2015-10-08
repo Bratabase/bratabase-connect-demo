@@ -9,7 +9,7 @@ You can see the app running at http://bratabase-connect.herokuapp.com/
 * Python
 * Virtualenvwrapper (Optional but recommended)
 
-Before beginning, you will need to register your Application on http://www.bratabase.com/my/developer/applications/
+Before beginning, you will need to register your Application on http://www.bratabase.com/my/developer/
 
 On the `Redirect URI` field, enter the host you will be running this from (possibly `http://localhost:8000`) and make sure the path is `/complete/bratabase/`.
 
